@@ -5,10 +5,16 @@ Command: npx gltfjsx@6.2.15 public/roomportfolio-transformed.glb
 
 import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
+import {
+  useGLTF,
+  useAspect,
+  useVideoTexture,
+  useTexture,
+} from "@react-three/drei";
 
 export function House(props) {
   const { nodes, materials } = useGLTF("/roomportfolio-transformed.glb");
+  const size = useAspect(200, 100);
   return (
     <group {...props} dispose={null}>
       <group scale={(1, 1, 1)}>
@@ -41,7 +47,12 @@ export function House(props) {
           material={materials["10239_Office_Chair_v1"]}
         />
         <mesh geometry={nodes.wall_shelf.geometry} material={materials.Shelf} />
-        <mesh geometry={nodes.tv.geometry} material={materials["tv screen"]} />
+        <group position={[23.5, 25.5, -10]} scale={[20.4, 11.4, 10]}>
+          <mesh geometry={nodes.tv.geometry}>
+            <planeGeometry />
+            <VideoMaterial scale={size} url="/TBJMOMENTS.mp4" />
+          </mesh>
+        </group>
         <mesh geometry={nodes.Floor.geometry} material={materials.T} />
         <mesh geometry={nodes.Ground.geometry} material={materials.Ground} />
         <group
@@ -99,6 +110,10 @@ export function House(props) {
       </group>
     </group>
   );
+}
+function VideoMaterial({ url }) {
+  const texture = useVideoTexture(url);
+  return <meshBasicMaterial map={texture} toneMapped={false} />;
 }
 
 useGLTF.preload("/roomportfolio-transformed.glb");
