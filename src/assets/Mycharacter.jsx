@@ -22,11 +22,7 @@ export function Me(props) {
   return (
     <group {...props} ref={group} dispose={null}>
       <group>
-        <group
-          scale={[0.3, 0.3, 0.3]}
-          position={[-0.95, -0.85, -0.25]}
-          rotation={[1.5, 0, 0]}
-        >
+        <group scale={[0.3, 0.3, 0.3]} position={[-0.45, -0.65, -0.05]}>
           <Annotation>
             Click Me <span style={{ fontSize: "1.5em" }}>🌖</span>
           </Annotation>
@@ -101,6 +97,24 @@ function Annotation({ children, ...props }) {
       }
     >
       <div className="annotation" onClick={() => console.log(".")}>
+        {children}
+      </div>
+    </Html>
+  );
+}
+function Small({ children, ...props }) {
+  return (
+    <Html
+      {...props}
+      transform
+      geometry={
+        /** The geometry is optional, it allows you to use any shape.
+         *  By default it would be a plane. We need round edges here ...
+         */
+        <roundedPlaneGeometry args={[1.66, 0.47, 0.24]} />
+      }
+    >
+      <div className="small" onClick={() => console.log(".")}>
         {children}
       </div>
     </Html>

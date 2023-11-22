@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { House } from "../src/assets/Roomportfolio";
-import { Me } from "../src/assets/Mycharacter";
+import { Me } from "../src/assets/Mycharacterbkp";
 import { View } from "./assets/components/Overlayunderlay";
 
 import {
@@ -20,11 +20,11 @@ function App() {
       </group>
       <group scale={9} position={[-38, -250, -40.4]} rotation={[0, -0.3, 0]}>
         <House />
-        <group scale={15} position={[32, 5, 17]} rotation={[-1.5, 0, 0]}>
+        <group scale={7} position={[32, 19, 17]}>
           <Me />
         </group>
       </group>
-      <PerspectiveCamera makeDefault position={[30, 18, 788.5]} />
+      <PerspectiveCamera makeDefault position={[30, 18, 784.5]} />
       <Environment preset="city" background blur={1} />
     </Canvas>
   );

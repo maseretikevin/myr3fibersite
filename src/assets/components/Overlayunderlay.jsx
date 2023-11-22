@@ -86,7 +86,7 @@ export function View({ ...props }) {
               whiteSpace: "nowrap",
             }}
           >
-            CLICK LINKS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⎑
+            CLICK LINKS&nbsp;⎑
           </p>
         </div>
         <div style={{ height: 10 }} />
@@ -177,6 +177,28 @@ export function View({ ...props }) {
           <a href="http://maseretikevin.netlify.app">
             In <b>Detail</b>
           </a>{" "}
+        </p>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          top: 170,
+          right: 120,
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "'Antonio', sans-serif",
+            flex: "1 1 0%",
+            height: 30,
+            fontSize: 30,
+            fontWeight: "700",
+            lineHeight: "30px",
+            color: "black",
+            letterSpacing: -2,
+          }}
+        >
+          Click Avatar
         </p>
       </div>
     </Html>
