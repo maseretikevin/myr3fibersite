@@ -5,12 +5,7 @@ Command: npx gltfjsx@6.2.15 public/roomportfolio-transformed.glb
 
 import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
-import {
-  useGLTF,
-  useAspect,
-  useVideoTexture,
-  useTexture,
-} from "@react-three/drei";
+import { useGLTF, useAspect, useVideoTexture } from "@react-three/drei";
 
 export function House(props) {
   const { nodes, materials } = useGLTF("/roomportfolio-transformed.glb");

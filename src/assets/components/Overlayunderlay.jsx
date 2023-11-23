@@ -38,7 +38,7 @@ export function View({ ...props }) {
               fontSize: 30,
               fontWeight: "700",
               lineHeight: "30px",
-              color: "black",
+              color: "orange",
               letterSpacing: -2,
             }}
           >
@@ -51,6 +51,9 @@ export function View({ ...props }) {
         <div style={{ height: 60 }} />
         <div
           style={{
+            position: "relative",
+            marginLeft: "2px",
+            marginTop: "8px",
             width: "100%",
             padding: 0,
             display: "inline-flex",
@@ -66,27 +69,40 @@ export function View({ ...props }) {
               height: "100%",
               fontSize: 12,
               lineHeight: "1.5em",
-              color: "black",
+              color: "orange",
             }}
           >
-            <b>Laravel Developer & Blender Artist</b>
+            <p>
+              <b>Laravel Developer </b>
+            </p>
+            <br />
+            &nbsp;&nbsp;{"  "}{" "}
+            <span style={{ marginLeft: "2px", marginRight: "2px" }}>&</span>{" "}
+            {"  "}&nbsp;&nbsp;
+            <br />
+            <p>
+              <b>Blender Artist</b>
+            </p>
             <br />
           </p>
           <div style={{ width: 10 }} />
           <p
             className="full"
             style={{
+              position: "absolute",
+              marginRight: "250px",
+              marginTop: "-50px",
               transform: "rotate3d(0, 0, 1, 90deg) translate3d(100%,10px,0)",
               transformOrigin: "right",
               fontSize: 12,
               fontWeight: "700",
               lineHeight: "100%",
               textAlign: "right",
-              color: "black",
+              color: "purple",
               whiteSpace: "nowrap",
             }}
           >
-            CLICK LINKS&nbsp;⎑
+            CLICK LINKS &nbsp;<span style={{ color: "blue" }}>⎑</span>
           </p>
         </div>
         <div style={{ height: 10 }} />
@@ -123,7 +139,7 @@ export function View({ ...props }) {
               flex: "1 1 0%",
               fontSize: 12,
               lineHeight: "1.5em",
-              color: "black",
+              color: "orange",
             }}
           >
             <b>
@@ -194,7 +210,7 @@ export function View({ ...props }) {
             fontSize: 30,
             fontWeight: "700",
             lineHeight: "30px",
-            color: "black",
+            color: "orange",
             letterSpacing: -2,
           }}
         >
