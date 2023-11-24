@@ -11,8 +11,7 @@ import {
   Sparkles,
 } from "@react-three/drei";
 import "./App.css";
-
-function App() {
+function Models() {
   return (
     <Canvas shadows gl={{ antialias: false }}>
       <color attach="background" args={["#202030"]} />
@@ -34,6 +33,13 @@ function App() {
       <Environment files="/sky.hdr" background blur={0.5} />
       <PerspectiveCamera makeDefault position={[30, 18, 784.5]} />
     </Canvas>
+  );
+}
+
+function App() {
+  return (
+    <Suspense fallback={<div style={{position: "absolute", marginTop: "500px", marginLeft:"100px"}}>Loading...</div>}>
+    <Models/>
   );
 }
 
