@@ -40,6 +40,7 @@ function App() {
   return (
     <Suspense fallback={<div style={{position: "absolute", marginTop: "500px", marginLeft:"100px"}}>Loading...</div>}>
     <Models/>
+    </Suspense>
   );
 }
 
