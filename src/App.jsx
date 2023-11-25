@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { House } from "../src/assets/Roomportfolio";
 import { Me } from "../src/assets/Mycharacterbkp";
 import { View } from "./assets/components/Overlayunderlay";
+import { Loader } from "../src/assets/Loader";
 
 import {
   CameraControls,
@@ -38,7 +39,7 @@ function Models() {
 
 function App() {
   return (
-    <Suspense fallback={<div style={{position: "absolute", marginTop: "500px", marginLeft:"100px", alignItems:"center"}}><span>Loading...</span></div>}>
+    <Suspense fallback={<div style={{position: "absolute", marginTop: "500px", marginLeft:"100px", alignItems:"center"}}><Loader /></div>}>
     <Models/>
     </Suspense>
   );
