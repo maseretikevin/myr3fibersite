@@ -4,6 +4,7 @@ import { House } from "../src/assets/Roomportfolio";
 import { Me } from "../src/assets/Mycharacterbkp";
 import { View } from "./assets/components/Overlayunderlay";
 import { Loader } from "../src/assets/Loader";
+import logo from "/logo.svg";
 
 import {
   CameraControls,
@@ -36,11 +37,17 @@ function Models() {
     </Canvas>
   );
 }
+function Logo() {
+  <div>
+  <img src="/logo.svg" />
+  </div>
+}
 
 function App() {
   return (
     <Suspense fallback={<div style={{position: "absolute", marginTop: 100px, marginLeft: 100px, alignItems:"center"}}><Loader /></div>}>
     <Models/>
+      <Logo style={{position: "absolute", marginBottom: 10, marginLeft: 10}}/>
     </Suspense>
   );
 }
