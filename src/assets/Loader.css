@@ -1,0 +1,78 @@
+.svg {
+  text-align: center;
+}
+#package1 {
+  animation: package 2s ease-in-out infinite alternate;
+  -webkit-animation: package 2s ease-in-out infinite alternate;
+}
+#package2 {
+  animation: package 2s ease-in-out infinite alternate;
+  -webkit-animation: package 2s ease-in-out infinite alternate;
+}
+#front-wheel {
+  animation: wheels 2s infinite linear;
+  -webkit-animation: wheels 2s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#hind-wheel {
+  animation: wheels 2s infinite linear;
+  -webkit-animation: wheels 2s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#plant {
+  animation: fadein 2s ease-in alternate infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+  }
+}
+@keyframes wheels {
+  from {
+    transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg) rotateX(20deg);
+    -moz-transform: rotateZ(0deg) rotateX(20deg);
+    -ms-transform: rotateZ(0deg) rotateX(20deg);
+    -o-transform: rotateZ(0deg) rotateX(20deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+  }
+}
+@keyframes package {
+  from {
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+    -webkit-transform: rotateX(20deg);
+    -moz-transform: rotateX(20deg);
+    -ms-transform: rotateX(20deg);
+    -o-transform: rotateX(20deg);
+  }
+}
