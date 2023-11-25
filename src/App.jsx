@@ -45,7 +45,7 @@ function Logo() {
 
 function App() {
   return (
-    <Suspense fallback={<div style={{position: "absolute", marginTop: 100px, marginLeft: 100px, alignItems:"center"}}><Loader /></div>}>
+    <Suspense fallback={<div style={{position: "absolute", marginTop: 30px, marginLeft: 100px, alignItems:"center"}}><Loader /></div>}>
     <Models/>
       <Logo style={{position: "absolute", marginBottom: 10, marginLeft: 10}}/>
     </Suspense>
