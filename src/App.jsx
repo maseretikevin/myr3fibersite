@@ -39,7 +39,7 @@ function Models() {
 
 function App() {
   return (
-    <Suspense fallback={<div style={{position: "absolute", marginTop: "50px", marginLeft: "70px", alignItems:"center"}}><Loader /></div>}>
+    <Suspense fallback={<div style={{position: "absolute", marginTop: "50px", marginLeft: "70px", alignItems:"center"}}><Loader />Loading...</div>}>
     <Models/>
     </Suspense>
   );
