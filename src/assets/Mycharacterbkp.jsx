@@ -12,6 +12,7 @@ const Avatar = () => {
   );
   const [isClicked, setIsClicked] = useState(false);
   useEffect(() => {
+    console.log(actions);
     actions[names[index]]?.reset().fadeIn(0.5).play();
     return () => {
       actions[names[index]]?.fadeOut(0.5);
