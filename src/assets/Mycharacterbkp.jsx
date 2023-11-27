@@ -4,7 +4,7 @@ import scenePath from "/memodels/mycharacter.glb";
 import { Popconfirm } from "antd";
 
 const Avatar = () => {
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(2);
   const avatar = useGLTF(scenePath);
   const { ref, actions, names } = useAnimations(
     avatar.animations,
