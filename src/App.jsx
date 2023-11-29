@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { House } from "../src/assets/Roomportfolio";
 import { Me } from "../src/assets/Mycharacterbkp";
+import { Kenyanflag } from "../src/assets/Flag";
 import { View } from "./assets/components/Overlayunderlay";
 import { Loader } from "../src/assets/Loader";
 
@@ -26,6 +27,7 @@ function Models() {
         </group>
         <group scale={9} position={[-38, -250, -40.4]} rotation={[0, -0.3, 0]}>
           <House />
+          <Kenyanflag />
           <group scale={7} position={[32, 19, 17]}>
             <Me />
           </group>
