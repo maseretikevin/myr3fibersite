@@ -33,7 +33,7 @@ function Models() {
           </group>
         </group>
       </Suspense>
-      <Environment files="/sky.hdr" background blur={0.5} />
+      <Environment files="/Nebula1.hdr" background blur={0.1} />
       <PerspectiveCamera makeDefault position={[30, 18, 784.5]} />
     </Canvas>
   );
