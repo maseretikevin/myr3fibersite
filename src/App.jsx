@@ -38,18 +38,6 @@ function Models() {
     </Canvas>
   );
 }
-function Rotate(props) {
-  const ref = useRef()
-  useFrame((state) => (ref.current.rotation.y = state.clock.elapsedTime))
-  return <group ref={ref} {...props} />
-}
-function Loader() {
-  return (
-    <Rotate position-y={-0.5} scale={0.2}>
-    <Model url="avatar"/>
-    </Rotate>
-  );
-}
 
 function App() {
   return (
