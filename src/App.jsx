@@ -1,10 +1,10 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { House } from "../src/assets/Roomportfolio";
 import { Me } from "../src/assets/Mycharacterbkp";
 import { Kenyanflag } from "../src/assets/Flag";
 import { View } from "./assets/components/Overlayunderlay";
-import { Loader } from "../src/assets/Loader";
+
 
 import {
   CameraControls,
@@ -38,11 +38,25 @@ function Models() {
     </Canvas>
   );
 }
+function Rotate(props) {
+  const ref = useRef()
+  useFrame((state) => (ref.current.rotation.y = state.clock.elapsedTime))
+  return <group ref={ref} {...props} />
+}
+function Loader() {
+  return (
+    <Rotate position-y={-0.5} scale={0.2}>
+    <Model url="avatar"/>
+    </Rotate>
+  );
+}
 
 function App() {
   return (
-    <Suspense fallback={<div style={{position: "absolute", marginTop: "50px", marginLeft: "70px", alignItems:"center"}}><Loader />Loading...</div>}>
-    <Models/>
+    <Suspense fallback={<div style={{position: "absolute", marginTop: "50px", marginLeft: "70px", alignItems:"center"}}>Loading...</div>}>
+    <Suspense fallback={<Loader/>}>
+      <Models/>
+    </Suspense>
     </Suspense>
   );
 }
