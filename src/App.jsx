@@ -5,7 +5,6 @@ import { Me } from "../src/assets/Mycharacterbkp";
 import { Kenyanflag } from "../src/assets/Flag";
 import { View } from "./assets/components/Overlayunderlay";
 
-
 import {
   CameraControls,
   PerspectiveCamera,
@@ -13,6 +12,12 @@ import {
   Sparkles,
 } from "@react-three/drei";
 import "./App.css";
+
+function Loader() {
+  const { active, progress, errors, item, loaded, total } = useProgress();
+  return <Html center>{progress} % loaded</Html>;
+}
+
 function Models() {
   return (
     <Canvas shadows gl={{ antialias: false }}>
@@ -41,8 +46,8 @@ function Models() {
 
 function App() {
   return (
-    <Suspense fallback={<div style={{position: "absolute", marginTop: "50px", marginLeft: "70px", alignItems:"center"}}>Loading...</div>}>
-      <Models/>
+    <Suspense fallback={<Loader />}>
+      <Models />
     </Suspense>
   );
 }
