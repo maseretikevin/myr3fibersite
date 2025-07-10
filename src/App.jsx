@@ -26,7 +26,7 @@ function Models() {
       <group scale={60} position={[8, 1, 1]} rotation={[0, -0.3, 0]}>
         <View />
       </group>
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader />}>
         <group scale={400}>
           <Sparkles count={20000} scale={[20, 20, 10]} size={1.5} speed={4} />
         </group>
@@ -45,11 +45,7 @@ function Models() {
 }
 
 function App() {
-  return (
-    <Suspense fallback={<Loader />}>
-      <Models />
-    </Suspense>
-  );
+  return <Models />;
 }
 
 export default App;
